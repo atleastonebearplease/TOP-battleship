@@ -1,0 +1,7 @@
+@import './josh-c-styles.css';
+
+/* Styles for the extension pop up window */
+
+* {
+    box-sizing: border-box;
+}
