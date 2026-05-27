@@ -5,6 +5,7 @@ const WebpackCopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     mode: 'development',
 
+    /* Add entries here  */
     entry: {
         index: path.resolve(__dirname, 'src/index.js'),
         sum: path.resolve(__dirname, 'src/sum.js'),
