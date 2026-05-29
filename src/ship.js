@@ -11,7 +11,5 @@ export class Ship {
         this.orientation = orientation;
     }
 
-    calculateCells() {
-
-    }
+    
 }

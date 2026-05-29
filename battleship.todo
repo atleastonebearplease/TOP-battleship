@@ -14,6 +14,10 @@ Getting started:
                 Submits attack on coordinate, returns a message back on the result
             ☐ Keeps track of player board attacks
             ☐ Contain player ships
+                ✔ addShip() function @done(26-05-29 10:51)
+            ☐ getPlayerCell()
+            ☐ getAttackCell()
+
             ☐ Report if all ships are sunk
         ☐ Player class
             ☐ Real player
