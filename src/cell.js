@@ -3,5 +3,6 @@ export class Cell {
         this.x = x;
         this.y = y;
         this.hit = false;
+        this.isShipCell = false;
     }
 }
