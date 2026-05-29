@@ -10,22 +10,23 @@ Getting started:
             ☐ isSunk()
         ☐ Gameboard class
             ☐ Place ships at specific coordinates
-            ☐ receiveAttack()
-                Determines if attack hit a ship; calls hit() function on ship or records miss
-            ☐ tracks missed attacks
-            ☐ report if all ships are sunk
+            ☐ attack()
+                Submits attack on coordinate, returns a message back on the result
+            ☐ Keeps track of player board attacks
+            ☐ Contain player ships
+            ☐ Report if all ships are sunk
         ☐ Player class
             ☐ Real player
             ☐ Computer player
-        Game Logic:
-            Event listeners should step throiugh the game turn by turn using only methods from other objects.
-            If you are tempted to make a new function, step back and figure out which class or module that function
-            belongs to
-            ☐ Module for managing actions in the DOM
-                Drive game with event listeners to interact with objects
-            ☐ Methods to render reach player's game board, so put them in appropriate module
-            ☐ Attacks throiugh clicking on coordinate on enemy game board
-            ☐ Computer makes random plays
-                ☐ You can improve this logic later to try to sink a ship once one is hit
-            ☐ System to allow players to place ships themselves
-                Sounds like we'll need some simple state machines to transition from placing to playing
+    Game Logic:
+        ☐ Module for managing actions in the DOM
+            Drive game with event listeners to interact with objects
+        ☐ Methods to render reach player's game board, so put them in appropriate module
+        ☐ Attacks throiugh clicking on coordinate on enemy game board
+        ☐ Computer makes random plays
+            ☐ You can improve this logic later to try to sink a ship once one is hit
+        ☐ System to allow players to place ships themselves
+    UI:
+        ☐ We should have a log that shows each message as you're going along on the side
+        ☐ Implement simple state machine to control the UI behavior
+        
