@@ -1,11 +1,26 @@
+import { Cell } from "./cell";
+
+const BOARD_SIZE = 10;
+
 export class GameBoard {
     constructor() {
         this.playerBoard = [];
         this.attackBoard = [];
+        this.#initializeBoard();
     }
 
     #initializeBoard() {
-        
+        for(let x = 0; x < BOARD_SIZE; x++) {
+            for(let y = 0; y < BOARD_SIZE; y++) {
+                this.playerBoard[x][y] = new Cell(x, y);
+            }
+        }
+
+        for(let x = 0; x < BOARD_SIZE; x++) {
+            for(let y = 0; y < BOARD_SIZE; y++) {
+                this.attackBoard[x][y] = new Cell(x, y);
+            }
+        }
     }
 
     /* 
