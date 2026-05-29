@@ -1,26 +1,40 @@
 import { Cell } from "./cell";
-
-const BOARD_SIZE = 10;
+import * as CONST from "./constants.js";
+import { SHIPS } from './shipTypes.js';
+import { Ship } from "./ship.js";
 
 export class GameBoard {
     constructor() {
         this.playerBoard = [];
         this.attackBoard = [];
         this.#initializeBoard();
+        this.ships = [];
     }
 
     #initializeBoard() {
-        for(let x = 0; x < BOARD_SIZE; x++) {
-            for(let y = 0; y < BOARD_SIZE; y++) {
-                this.playerBoard[x][y] = new Cell(x, y);
+        for(let x = 0; x < CONST.BOARD_SIZE; x++) {
+            let cellColumn = new Array();
+
+            for(let y = 0; y < CONST.BOARD_SIZE; y++) {
+                cellColumn.push(new Cell(x, y));
             }
+
+            this.playerBoard.push(cellColumn);
         }
 
-        for(let x = 0; x < BOARD_SIZE; x++) {
-            for(let y = 0; y < BOARD_SIZE; y++) {
-                this.attackBoard[x][y] = new Cell(x, y);
+        for(let x = 0; x < CONST.BOARD_SIZE; x++) {
+            let cellColumn = new Array();
+
+            for(let y = 0; y < CONST.BOARD_SIZE; y++) {
+                cellColumn.push(new Cell(x, y))
             }
+
+            this.attackBoard.push(cellColumn);
         }
+    }
+
+    addShip(x, y, orientation, shipType) {
+        this.ships.push(new Ship(x, y, orientation, shipType));
     }
 
     /* 

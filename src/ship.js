@@ -1,13 +1,17 @@
 //TODO: Move into constants file? (along with game states constants)
-export const HORIZONTAL = 0;
-export const VERTICAL = 1;
-
+import SHIPS from './shipTypes.js';
 
 export class Ship {
-    constructor(size, name, orientation) {
-        this.size = size;
-        this.name = name;
+    constructor(x, y, orientation, shipType) {
+        this.x = x;
+        this.y = y;
+        this.size = shipType.size;
+        this.name = shipType.name;
         this.cells = [];
         this.orientation = orientation;
-    } 
+    }
+
+    calculateCells() {
+
+    }
 }
