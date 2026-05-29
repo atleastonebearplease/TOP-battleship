@@ -7,7 +7,7 @@ export const SHIPS = {
         name: "Battleship",
         size: 4
     },
-    CRUISTER: {
+    CRUISER: {
         name: "Cruiser",
         size: 3
     },
